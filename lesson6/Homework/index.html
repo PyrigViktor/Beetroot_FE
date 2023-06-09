@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <title>HomeWorkLess06</title>
+</head>
+
+<body>
+    <form style=" display: table-row; flex-direction: row; gap:50px; max-width: 300px;">
+        <!-- Повне ім'я -->
+        <label for="fullname">Повне ім'я</label>
+        <input type="text" name="fullname" id="fullname" required>
+
+        <br>
+        <br>
+        <!-- Email користувача -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <br><br>
+        <!-- Пароль користувача -->
+        <label for="password">Пароль</label>
+        <input type="password" name="password" id="password" required>
+
+        <br>
+        <br>
+        <!-- Підтвердження паролю -->
+        <label for="password2">Пароль ще раз</label>
+        <input type="password" name="password2" id="password2" required>
+
+        <br>
+        <br>
+        <!-- Стать -->
+        <p>Стать</p>
+        <fieldset>
+            <input type="radio" name="gender" id="man-radio" value="Man" required>
+            <label for="man-radio">чоловіча</label>
+
+            <input style="margin-left: 20px;" type="radio" name="gender" id="femail-radio" value="Woman" required>
+            <label for="female-radio">жіноча</label>
+        </fieldset>
+
+        <br>
+        <!-- Вік -->
+        <label for="age">Вік</label>
+        <input style="width: 50px;" type="number" name="age" id="age" value="age" required>
+
+        <br>
+        <br>
+        <!-- Курс -->
+        <label for="course"> Курс </label>
+        <select id="course" required>
+            <option value="" hidden>Виберіть курс</option>
+            <option value="Front-End">Front-End</option>
+            <option value="Back-End">Back-End</option>
+            <option value="Project">Project Management</option>
+            <option value="QA">QA Manual</option>
+        </select>
+
+        <br>
+        <br>
+        <!-- Повна адресса -->
+        <label for="about">Повна адреса</label>
+        <textarea name="about" id="about" cols="25" rows="4" placeholder="Країна, регіон,місто/селище, вулиця"
+            required></textarea>
+
+        <br>
+
+        <!-- Обробка персональних данних -->
+        <label style="font-size: smaller;" for="policy">Я погоджуюсь з обробкою персональних данних</label>
+        <input type="checkbox" name="policy" id="policy" required>
+
+        <br>
+        <!-- Кнопки -->
+        <button style="margin-right: 115px;" type="reset">Очистити форму</button>
+        <button type="submit">Зареєструватися</button>
+    </form>
+</body>
+
+</html>
