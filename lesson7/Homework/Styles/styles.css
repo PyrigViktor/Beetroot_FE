@@ -30,6 +30,8 @@ html {
     top: 0;
     left: 0;
     width: 100%;
+    border: 1px;
+    border-bottom: 1px solid #828282;
 
 }
 
@@ -39,28 +41,26 @@ html {
     gap: 40px;
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     margin: 0 auto;
-    font-size: 18px;
-    line-height: 25px;
     align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-family: SansR;
     letter-spacing: 0.02em;
-    justify-content: space-between;
-
 }
 
-.site-header {
-    align-items: center;
-    justify-content: space-between;
+a {
+    text-decoration: none;
+    font-family: SansR;
+    letter-spacing: 0.02em;
+    line-height: 25px;
+    font-size: 18px;
+    color: #828282;
 }
-
 
 .intro {
+    padding-top: 12px;
 
-    padding-top: 92px;
 }
 
 .my-name {
@@ -70,34 +70,38 @@ html {
     padding-bottom: 50px;
 }
 
-.my-photo {
-    padding-bottom: 100px;
-}
-
-.about {
-    display: flex;
-    margin: 0 auto;
-}
-
-.about-title {
-
+h2 {
     font-family: Sans700;
     font-weight: 700;
     font-size: 34px;
     line-height: 46px;
     text-align: center;
+}
+
+p {
+    font-family: SansR;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    margin: 0 auto;
+    background-color: #F6F6f6;
+    padding-bottom: 50px;
+}
+
+.about-title {
+    padding-top: 100px;
     padding-bottom: 50px;
 }
 
 .about-p {
     max-width: 480px;
     max-height: 50px;
-    font-family: SansR;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
     text-align: center;
-    gap: 30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -108,26 +112,29 @@ html {
 .skills {
 
     display: flex;
-    margin: 0 auto
+    margin: 0 auto;
+    padding-bottom: 150px;
+
 }
 
 .skills-title {
+    padding-top: 80px;
 
-    font-family: Sans700;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 46px;
-    text-align: center;
-    padding-top: 100px;
 }
 
 .skills-p {
-    font-family: SansR;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
     padding-top: 10px;
+}
+
+
+.skills-p-img {
+    font-family: Sans700;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02rem;
+    color: #828282;
 }
 
 .skills-img {
@@ -146,10 +153,33 @@ html {
     font-family: SansR;
     letter-spacing: 0.02em;
     justify-content: space-between;
-    max-width: 970px;
+
+}
+
+#photoshop {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+
+#illustrator {
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+
+#after-effects {
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+
+#figma {
+    padding-top: 25px;
+    padding-bottom: 80px;
 }
 
 .skills-div {
+    max-width: 230px;
+    max-height: 170px;
     align-items: center;
     flex-direction: column;
     list-style-type: none;
@@ -157,29 +187,16 @@ html {
 
 }
 
-.stars-img {
-    padding-top: 50px;
+.portfolio {
+    background-color: #F6F6f6;
 }
 
 .portfolio-title {
-
-    font-family: Sans700;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 46px;
-    text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 50px;
-
-
 }
 
 .portfolio-p {
-    font-family: SansR;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
     text-decoration-line: underline;
     max-width: 200px;
     max-height: 50px;
@@ -196,12 +213,6 @@ html {
 }
 
 .contacts-title {
-
-    font-family: Sans700;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 46px;
-    text-align: center;
     padding-bottom: 20px;
 }
 
@@ -248,5 +259,6 @@ html {
     line-height: 19px;
     text-align: center;
     color: #828282;
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 100px;
 }
