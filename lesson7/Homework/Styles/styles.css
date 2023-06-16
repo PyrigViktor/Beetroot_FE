@@ -49,6 +49,7 @@ html {
     letter-spacing: 0.02em;
 }
 
+
 a {
     text-decoration: none;
     font-family: SansR;
@@ -261,4 +262,25 @@ p {
     color: #828282;
     padding-top: 60px;
     padding-bottom: 100px;
+}
+
+
+
+/* Lesson 08 homework part */
+
+* {
+    transition: all .1s ease-in;
+}
+
+.header-link:hover {
+    font-weight: 700;
+}
+
+.button-cont:hover {
+
+    transform: scale(1.1);
+}
+
+.contact-img:hover {
+    opacity: .50;
 }
