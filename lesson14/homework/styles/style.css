@@ -123,6 +123,10 @@
     color: black;
 }
 
+.sidebar-a:active {
+    color: black;
+}
+
 
 h2,
 .sidebar-nav {
