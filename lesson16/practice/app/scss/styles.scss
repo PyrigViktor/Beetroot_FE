@@ -1,0 +1,51 @@
+@use './veriables' as var;
+
+@use './text' as text;
+
+
+.container {
+    display: grid;
+    grid-template: repeat(2, minmax (100px, auto)) / repeat(2, minmax (200px, 1fr));
+    row-gap: 40px;
+    grid-template-areas:
+        "header header"
+        "avatar about";
+
+
+
+    &__header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__title {
+        @include text.text-uppercase;
+        // @include text.transform-text(uppercase);
+        // @include text.text-uppercase
+    }
+
+    &__subtitle {
+
+        @include text.text-uppercase;
+        // @include text.transform-text (uppercase);
+        // @include text.text-uppercase
+    }
+
+    &__avatar {
+        grid-area: avatar;
+        width: 300px;
+    }
+
+    &__about {
+        grid-area: about;
+    }
+
+
+    &__viev-btn {
+        @include text.text-uppercase
+    }
+}

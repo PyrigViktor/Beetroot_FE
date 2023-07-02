@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Staatliches;
+    src: url(/assets/fonts/Staatliches-Regular.ttf);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: Tourney;
+    src: url(/assets/fonts/Tourney_Condensed-SemiBold.ttf);
+    font-size: 22px;
+}
+
+@font-face {
+    font-family: Francois;
+    src: url(/assets/fonts/FrancoisOne-Regular.ttf);
+
+
+}
+
+@font-face {
+    font-family: Farro;
+    src: url(/assets/fonts/Farro-Light.ttf);
+}
+
+@font-face {
+    font-family: PTSans;
+    src: url(/assets/fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: PTSansIT;
+    src: url(/assets/fonts/PTSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: PTSansBD;
+    src: url(/assets/fonts/PTSans-Bold.ttf);
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 1200px;
+    padding-inline: 150px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.header>:first-child {
+    display: flex;
+    align-items: center;
+    font-family: Tourney;
+    text-transform: uppercase;
+}
+
+.header>:nth-child(2) {
+    display: flex;
+    align-items: center;
+    font-family: Staatliches;
+    padding-right: 400px;
+}
+
+h2 {
+    font-family: Francois;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 48px;
+    font-size: 36px;
+}
+
+.section-head>span {
+    font-family: Farro;
+    text-transform: none;
+    text-align: start;
+    padding-left: 5px;
+}
+
+.section-head {
+    display: flex;
+    padding-bottom: 40px;
+}
+
+section>p {
+    font-family: PTSans;
+    font-size: 28px;
+    line-height: 48px;
+    padding-bottom: 40px;
+}
+
+.span-bg-color {
+    background-color: lightgray;
+}

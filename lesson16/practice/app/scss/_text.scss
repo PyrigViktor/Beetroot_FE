@@ -1,0 +1,46 @@
+@use './veriables' as var;
+
+@mixin text-color ($color) {
+    color: $color;
+}
+
+// .text {
+//     letter-spacing: 1px;
+// }
+
+@mixin transform-text ($case) {
+    text-transform: $case;
+}
+
+@mixin text-lowercase {
+    @include transform-text(lowercase)
+}
+
+@mixin text-uppercase {
+    @include transform-text(uppercase)
+}
+
+
+// @mixin text-uppercase {
+//     text-transform: uppercase;
+// }
+
+.text--gold {
+    @include text-color(var.$gold)
+}
+
+.text--gray {
+    @include text-color(var.$gray);
+}
+
+.text--dark-gray {
+    @include text-color(var.$dark-grey)
+}
+
+.text--black {
+    @include text-color(var.$black)
+}
+
+.text--white {
+    @include text-color(var.$white)
+}
