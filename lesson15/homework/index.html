@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body class="wrapper">
+
+    <section class="account fd-clmn flex">
+
+        <form class="user-form" action="form">
+            <h2>Create an Account</h2>
+            <div class="user-name margin-btm flex">
+                <div>
+                    <label class="label" for="name">First Name</label>
+                    <input class="active-control border-input" type="text" name="name" id="name" required>
+                </div>
+
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input class="active-control border-input" type="text" name="lastname" id="lastname" required>
+                </div>
+            </div>
+
+            <div class="flex margin-btm fd-clmn ">
+                <label for="email">E-mail</label>
+                <input class="active-control user-email" type="email" name="email" id="email" required>
+                <p style="margin-top: 5px;">We'll never share your email with anyone else.</p>
+            </div>
+
+            <div class="margin-btm">
+                <fieldset class="flex fd-row user-gender">
+
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female" value="female" required>
+                    <label for="female">Female</label>
+                </fieldset>
+
+
+            </div>
+
+            <div class="margin-btm flex user-country">
+                <div>
+                    <label for=" user-country">Country</label>
+                    <select class="active-control border-input form-label" name="user-country" id="user-country">
+                        <option value="" hidden>Select</option>
+                        <option value="1">Ukraine</option>
+                        <option value="2">Germany</option>
+                        <option value="3">Poland</option>
+                        <option value="4">Czech Republic</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="user-city">City</label>
+                    <input class="active-control border-input" type="text" name="user-city" id="user-city">
+                </div>
+            </div>
+            <button class="sign-up-btn margin-btm" type="submit">Sign Up</button>
+            <div class="flex margin-btm">
+                <p class="block-footer ">By clicking the 'Sign Up' button, you confirm that you accept our <a
+                        href="">Terms
+                        of Use</a>
+                    and <a href="">Privacy Policy</a> .</p>
+            </div>
+        </form>
+        <footer class="block-footer footer flex ">
+            <h3>Have an account?</h3>
+            <a href="">Log In</a>
+        </footer>
+    </section>
+
+
+</body>
+
+</html>
