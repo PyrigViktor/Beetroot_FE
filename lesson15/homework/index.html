@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <title>Document</title>
 </head>
 
-<body class="wrapper">
+<body class="flex wrapper">
 
     <section class="account fd-clmn flex">
 
         <form class="user-form" action="form">
-            <h2>Create an Account</h2>
+            <!-- header -->
+            <h1>Create an Account</h1>
+            <!-- User name -->
             <div class="user-name margin-btm flex">
                 <div>
                     <label class="label" for="name">First Name</label>
@@ -25,13 +29,13 @@
                     <input class="active-control border-input" type="text" name="lastname" id="lastname" required>
                 </div>
             </div>
-
+            <!-- User email -->
             <div class="flex margin-btm fd-clmn ">
                 <label for="email">E-mail</label>
                 <input class="active-control user-email" type="email" name="email" id="email" required>
                 <p style="margin-top: 5px;">We'll never share your email with anyone else.</p>
             </div>
-
+            <!-- User gender -->
             <div class="margin-btm">
                 <fieldset class="flex fd-row user-gender">
 
@@ -42,9 +46,8 @@
                     <label for="female">Female</label>
                 </fieldset>
 
-
             </div>
-
+            <!-- User County -->
             <div class="margin-btm flex user-country">
                 <div>
                     <label for=" user-country">Country</label>
@@ -61,7 +64,10 @@
                     <input class="active-control border-input" type="text" name="user-city" id="user-city">
                 </div>
             </div>
-            <button class="sign-up-btn margin-btm" type="submit">Sign Up</button>
+
+            <!-- sign up button -->
+
+            <button class="sign-up-btn margin-btm" type="submit" value="sign up">Sign Up</button>
             <div class="flex margin-btm">
                 <p class="block-footer ">By clicking the 'Sign Up' button, you confirm that you accept our <a
                         href="">Terms
@@ -69,13 +75,92 @@
                     and <a href="">Privacy Policy</a> .</p>
             </div>
         </form>
+        <!--Footer -->
         <footer class="block-footer footer flex ">
-            <h3>Have an account?</h3>
+            <h5>Have an account?</h5>
             <a href="">Log In</a>
         </footer>
     </section>
 
 
+
+    <!-- SECTION 2 -->
+
+
+
+    <section class="account fd-clmn flex">
+
+
+        <form>
+
+
+            <h1>Profile</h1>
+
+            <!-- User photo -->
+
+            <div class="profile-photo flex fd-row">
+                <div class="image-preview"></div>
+                <label for="image-upload"></label>
+                <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
+                <!-- Я не совсем понял как сделать юзабельное изображение, и как убрать в inpute текст, сделав его пустым бордером -->
+                <!-- <!-- <button type="reset"><img src="/assets/img/trash icon.svg" alt=""></button> -->
+                <input type="image" id="trash" alt="reset" src="/assets/img/trash icon.svg">
+            </div>
+
+            <!-- User name and email -->
+
+            <div class="user-name margin-btm flex">
+                <div>
+                    <label class="label" for="profile name">Name</label>
+                    <input class="active-control border-input" type="text" name="name" id="profile name" required>
+                </div>
+
+                <div>
+                    <label for="lastname">E-mail</label>
+                    <input class="active-control border-input" type="email" name="profile email" id="profile email"
+                        required>
+                </div>
+            </div>
+
+            <!-- User country -->
+
+            <div class="margin-btm flex user-country">
+                <div>
+                    <label for=" user-country">Country</label>
+                    <select class="active-control border-input form-label" name="user-country" id="profile-country">
+                        <option value="" hidden>Select</option>
+                        <option value="1">Ukraine</option>
+                        <option value="2">Germany</option>
+                        <option value="3">Poland</option>
+                        <option value="4">Czech Republic</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="user-city">City</label>
+                    <input class="active-control border-input" type="text" name="user-city" id="profile-city">
+                </div>
+            </div>
+
+            <!-- user contacts -->
+
+            <div class="user-name margin-btm flex">
+                <div>
+                    <label class="label" for="zipcode">Zip Code</label>
+                    <input class="active-control border-input" type="number" name="zipcode" id="zipcode" required>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input class="active-control border-input" type="tel" name="phone" id="phone" required>
+                </div>
+            </div>
+
+            <button class="upd-btn" type="submit" name="send" value="update">Update</button>
+        </form>
+
+    </section>
+
 </body>
+<script src="/action.js"></script>
 
 </html>
