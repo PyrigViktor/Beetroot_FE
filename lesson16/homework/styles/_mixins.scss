@@ -1,0 +1,36 @@
+@use "./variable" as var;
+
+@mixin inline-padding {
+  padding-inline: var.$site-inline-padding;
+}
+
+@mixin border($radius, $color) {
+  border: 1px solid $color;
+  border-radius: $radius;
+}
+
+@mixin bg-img($img) {
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin social-border {
+  height: 38px;
+  width: 38px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+@mixin gap40 {
+  gap: 40px;
+}
+
+@mixin gap10 {
+  gap: 10px;
+}
