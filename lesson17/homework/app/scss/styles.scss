@@ -1,0 +1,92 @@
+@use "./variables" as var;
+@use "./text" as text;
+@use "./mixins.scss" as mix;
+
+.container {
+  display: grid;
+  grid-template: repeat(2, minmax(100px, 1fr)) / repeat(2, minmax(200px, 1fr));
+  grid-template-areas:
+    "header header"
+    "avatar about";
+  row-gap: 20px;
+
+  &__header {
+    grid-area: header;
+    @include mix.flex;
+    // display: flex;
+    flex-direction: column;
+    @include mix.flex-position-center;
+    // justify-content: center;
+    // align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  &__title {
+    @include text.text-uppercase;
+    // @include text.transform-text(uppercase);
+    // text-transform: uppercase;
+    // text-transform: lowercase;
+    // @include text.text-uppercase;
+  }
+
+  &__border {
+    position: relative;
+    display: inline-block;
+    width: 500px;
+    @include mix.border(var.$gold); //  border: 1px solid gold;
+  }
+
+  &__border--img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    background-color: white;
+  }
+
+  &__subtitle {
+    @include text.text-uppercase;
+    // @include text.transform-text(lowercase);
+    // text-transform: lowercase;
+    // @include text.transform-text(uppercase);
+    // @include text.text-uppercase;
+  }
+
+  // .container__avatar
+  &__avatar {
+    grid-area: avatar;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  // .container__about
+  &__about {
+    grid-area: about;
+    @include mix.flex;
+    // display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include mix.flex-position-center;
+    // align-items: center;
+    // justify-content: center;
+    padding-inline: 100px;
+    border-left: 1px solid gold;
+  }
+
+  &__view-btn {
+    @include text.text-uppercase;
+    padding: 2px;
+    @include mix.border(var.$gold);
+    // border: 1px solid gold;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+
+  &__about--border {
+    border-bottom: 1px solid gold;
+    height: 40px;
+  }
+}

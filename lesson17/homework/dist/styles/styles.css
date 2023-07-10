@@ -1,0 +1,95 @@
+.text {
+  letter-spacing: 1px;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--gold {
+  color: gold;
+}
+
+.text--gray {
+  color: #CCCCCC;
+}
+
+.text--dark-gray {
+  color: #666666;
+}
+
+.text--black {
+  color: #333333;
+}
+
+.text--white {
+  color: #FFFFFF;
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(2, minmax(100px, 1fr))/repeat(2, minmax(200px, 1fr));
+  grid-template-areas: "header header" "avatar about";
+  row-gap: 20px;
+}
+.container__header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.container__title {
+  text-transform: uppercase;
+  font-style: italic;
+}
+.container__border {
+  position: relative;
+  display: inline-block;
+  width: 500px;
+  border: 1px solid gold;
+}
+.container__border--img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  background-color: white;
+}
+.container__subtitle {
+  text-transform: uppercase;
+  font-style: italic;
+}
+.container__avatar {
+  grid-area: avatar;
+  width: 300px;
+  margin: 0 auto;
+}
+.container__about {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 100px;
+  border-left: 1px solid gold;
+}
+.container__view-btn {
+  text-transform: uppercase;
+  font-style: italic;
+  padding: 2px;
+  border: 1px solid gold;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.container__about--border {
+  border-bottom: 1px solid gold;
+  height: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
