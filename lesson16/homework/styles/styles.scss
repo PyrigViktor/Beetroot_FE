@@ -116,6 +116,8 @@ body {
     @include mix.flex;
     justify-content: center;
     align-items: center;
-    @include mix.social-border;
+    height: 38px;
+    width: 38px;
+    @include mix.social-border(var.$white, var.$white, 5px);
   }
 }
