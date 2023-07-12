@@ -1,0 +1,86 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+@font-face {
+  font-family: Lato;
+  src: url(/assets/fonts/lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Red Hat Display;
+  src: url(/assets/fonts/red_hat_display/static/RedHatDisplay-Regular.ttf);
+}
+
+.site-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  @include mix.section-padding;
+  text-transform: uppercase;
+  @include mix.text-header;
+}
+
+.blog {
+  @include mix.section-padding;
+  padding-block: 70px;
+
+  @include mix.tablet-screen {
+    padding-block: 50px;
+  }
+
+  @include mix.mobile-screen {
+    padding-block: 40px;
+  }
+
+  &__title--main {
+    @include mix.title-main;
+    padding-bottom: 70px;
+    @include mix.mobile-screen {
+      padding-bottom: 40px;
+    }
+    @include mix.tablet-screen {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__title,
+  &__description--title {
+    padding-bottom: 50px;
+    @include mix.title;
+    @include mix.mobile-screen {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__text {
+    max-width: 1170px;
+    @include mix.text;
+
+    padding-bottom: 70px;
+    @include mix.mobile-screen {
+      padding-bottom: 70px;
+      max-width: 300px;
+    }
+    @include mix.tablet-screen {
+      padding-bottom: 70px;
+      max-width: 700px;
+    }
+    padding-top: 20px;
+  }
+
+  &__description--text {
+    max-width: 570px;
+
+    @include mix.text;
+
+    padding-bottom: 70px;
+    @include mix.mobile-screen {
+      padding-bottom: 70px;
+    }
+    @include mix.tablet-screen {
+      padding-bottom: 70px;
+    }
+    padding-top: 20px;
+  }
+}
