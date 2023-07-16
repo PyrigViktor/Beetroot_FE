@@ -68,11 +68,17 @@
 @media screen and (max-width: 768px) {
   .blog__title--main {
     padding-bottom: 40px;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 1.5px;
   }
 }
 @media screen and (max-width: 1440px) {
   .blog__title--main {
     padding-bottom: 50px;
+    font-size: 33px;
+    line-height: 50px;
+    letter-spacing: 1.65px;
   }
 }
 .blog__title, .blog__description--title {
@@ -87,9 +93,19 @@
 @media screen and (max-width: 768px) {
   .blog__title, .blog__description--title {
     padding-bottom: 40px;
+    font-size: 26px;
+    letter-spacing: 2.6px;
   }
 }
-.blog__text {
+.blog__description--title {
+  padding-top: 90px;
+}
+@media screen and (max-width: 768px) {
+  .blog__description--title {
+    padding-top: 70px;
+  }
+}
+.blog__text, .blog__description--text {
   max-width: 1170px;
   font-family: "Lato";
   font-size: 19px;
@@ -98,23 +114,105 @@
   line-height: 32px;
   letter-spacing: 0.95px;
   color: #7B7B7B;
-  padding-bottom: 70px;
+  padding-bottom: 90px;
   padding-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  .blog__text {
+  .blog__text, .blog__description--text {
     padding-bottom: 70px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
     width: 300px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .blog__text {
+  .blog__text, .blog__description--text {
     padding-bottom: 70px;
     max-width: 700px;
   }
 }
 .blog__description--text {
   max-width: 570px;
+}
+@media screen and (max-width: 768px) {
+  .blog__description--text {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .blog__description--text {
+    max-width: 700px;
+  }
+}
+
+footer {
+  background-color: #f4f4f4;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 135px;
+}
+@media screen and (max-width: 1440px) {
+  .site-footer {
+    padding-inline: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .site-footer {
+    padding-inline: 10px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.site-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 300px;
+}
+@media screen and (max-width: 1440px) {
+  .site-footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .site-footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    letter-spacing: 1.6px;
+  }
+}
+.site-footer__contacts--title {
+  font-family: "Red Hat Display";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 2.4px;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .site-footer__contacts--title {
+    font-size: 25px;
+    letter-spacing: 1.6px;
+  }
+}
+.site-footer__contacts > a {
   font-family: "Lato";
   font-size: 19px;
   font-style: normal;
@@ -122,20 +220,49 @@
   line-height: 32px;
   letter-spacing: 0.95px;
   color: #7B7B7B;
-  padding-bottom: 70px;
-  padding-top: 20px;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 1.6px;
+  color: black;
 }
-@media screen and (max-width: 768px) {
-  .blog__description--text {
-    padding-bottom: 70px;
-    width: 300px;
-  }
+.site-footer__contacts > a:nth-child(2) {
+  padding-bottom: 14px;
 }
-@media screen and (max-width: 1440px) {
-  .blog__description--text {
-    padding-bottom: 70px;
-    max-width: 700px;
-  }
+.site-footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.site-footer__icons--border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+}
+.site-footer__icons--border:hover {
+  background: #565656;
+}
+.site-footer svg:hover path {
+  fill: white;
+}
+.site-footer__text {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-family: "Lato";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.95px;
+  color: #7B7B7B;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
