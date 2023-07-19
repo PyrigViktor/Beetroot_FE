@@ -10,6 +10,10 @@
   font-family: JosefinSans;
   src: url(../assets/fonts/JosefinSans-Regular.ttf);
 }
+.wrapper {
+  width: 1920px;
+}
+
 .header__bg {
   height: 862px;
   background-position: center;
@@ -182,7 +186,7 @@
   position: absolute;
   top: 60px;
   left: 0;
-  transform: translatex(22%);
+  transform: translatex(25%);
 }
 .steps__icons {
   width: 424px;
@@ -193,7 +197,7 @@
   justify-content: center;
   margin-top: 107px;
   gap: 20px;
-  position: relative;
+  position: relativ;
 }
 .steps__icons--border {
   z-index: 1;

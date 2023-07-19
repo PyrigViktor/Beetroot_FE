@@ -15,6 +15,10 @@
     src: url(../assets/fonts/JosefinSans-Regular.ttf);
 }
 
+.wrapper {
+    width: 1920px;
+}
+
 .header {
     &__bg {
         @include mix.bg-settings(862px);
@@ -147,7 +151,7 @@
         position: absolute;
         top: 60px;
         left: 0;
-        transform: translatex(22%);
+        transform: translatex(25%);
     }
 
     &__icons {
@@ -159,8 +163,7 @@
         justify-content: center;
         margin-top: 107px;
         gap: 20px;
-        position: relative;
-
+        position: relativ;
         &--border {
             z-index: 1;
             border: 50px solid var.$dark-gray;
