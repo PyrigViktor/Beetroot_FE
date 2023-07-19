@@ -1,0 +1,414 @@
+@font-face {
+  font-family: Aleo;
+  src: url(../assets/fonts/Aleo-Regular.ttf);
+}
+@font-face {
+  font-family: Josefin-light;
+  src: url(../assets/fonts/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSans;
+  src: url(../assets/fonts/JosefinSans-Regular.ttf);
+}
+.header__bg {
+  height: 862px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/headerbackground.png);
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__title {
+  padding-top: 295px;
+  padding-bottom: 8px;
+  font-family: "JosefinSans";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.header__sub-title {
+  padding-bottom: 48px;
+  font-family: "JosefinSans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #ffffff;
+  letter-spacing: 6.82px;
+}
+.header__search {
+  position: relative;
+  padding-bottom: 210px;
+}
+.header__search--input {
+  width: 647px;
+  height: 60px;
+  flex-shrink: 0;
+}
+.header__search--button {
+  position: absolute;
+  transform: translate(-145px, 4px);
+  width: 139px;
+  height: 52px;
+  padding: 16px 24px;
+  border: 0;
+  background-color: #5373fd;
+  font-family: "Aleo";
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+.header__navigation {
+  display: flex;
+  flex-direction: row;
+  padding-inline: 300px;
+  justify-content: space-between;
+  height: 84px;
+  align-items: center;
+  background-color: #5373fd;
+}
+.header__navigation--text {
+  font-family: "JosefinSans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2.4px;
+}
+.header__navigation--list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 40px;
+  font-family: "Aleo";
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.choose-bg {
+  height: 704px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/why-choose-bg.png);
+}
+
+.blog {
+  display: flex;
+  padding-inline: 300px;
+  flex-direction: row;
+}
+.blog__title {
+  font-family: "Aleo";
+  font-size: 36px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: capitalize;
+  padding-bottom: 24px;
+}
+.blog__text {
+  font-family: "Josefin-light";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  color: #ffffff;
+  letter-spacing: 1.6px;
+  padding-bottom: 32px;
+}
+.blog__choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 648px;
+  position: relative;
+}
+.blog__choose--card1 {
+  position: absolute;
+  transform: translate(784px, 124px);
+}
+.blog__choose--card2 {
+  position: absolute;
+  transform: translate(890px, 360px);
+}
+.blog__button {
+  width: 213px;
+  height: 60px;
+  background-color: #5373fd;
+  font-family: "Aleo";
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.12px;
+  border: 0;
+}
+
+.steps {
+  padding-inline: 300px;
+  background-color: #333333;
+  height: 306px;
+}
+.steps__search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.steps__svg {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  transform: translatex(22%);
+}
+.steps__icons {
+  width: 424px;
+  height: 139px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 107px;
+  gap: 20px;
+  position: relative;
+}
+.steps__icons--border {
+  z-index: 1;
+  border: 50px solid #333333;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steps__icons--img {
+  display: flex;
+  position: absolute;
+}
+.steps__text {
+  font-family: "Aleo";
+  font-size: 36px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: capitalize;
+}
+
+.spain {
+  display: flex;
+  padding-inline: 300px;
+  padding-top: 220px;
+}
+.spain--reverse {
+  display: flex;
+  justify-content: flex-end;
+}
+.spain__sub-title {
+  font-family: "Josefin-light";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+.spain__title {
+  font-family: "JosefinSans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.spain__text {
+  font-family: "Josefin-light";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  color: #ffffff;
+  letter-spacing: 1.6px;
+  padding-bottom: 8px;
+  width: 584px;
+}
+.spain__container {
+  width: 648px;
+  height: 344px;
+  background: rgba(35, 35, 35, 0.9);
+  display: flex;
+  flex-direction: column;
+  padding-top: 44px;
+  gap: 16px;
+  padding-left: 32px;
+}
+.spain__button {
+  width: 213px;
+  height: 60px;
+  background-color: #5373fd;
+  font-family: "Aleo";
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.12px;
+  border: 0;
+  position: relative;
+  text-align: center;
+}
+.spain__button--span {
+  z-index: 1;
+  position: relative;
+}
+.spain__button--svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.tourist {
+  display: flex;
+  padding-inline: 300px;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 120px;
+}
+.tourist__title {
+  font-family: "Aleo";
+  font-size: 36px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-transform: capitalize;
+}
+.tourist__container {
+  display: flex;
+  flex-direction: row;
+  height: 280px;
+  background-color: #333333;
+  margin-top: 60px;
+}
+.tourist__container--about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 65px;
+  gap: 16px;
+}
+.tourist__container--title {
+  font-family: "JosefinSans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.tourist__container--text {
+  font-family: "Josefin-light";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  color: #ffffff;
+  letter-spacing: 1.6px;
+  width: 760px;
+}
+
+.footer {
+  background-color: #000000;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__title {
+  font-family: "JosefinSans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2.4px;
+  padding-bottom: 8px;
+}
+.footer__text {
+  font-family: "JosefinSans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: #ffffff;
+  letter-spacing: 2.8px;
+  padding-bottom: 20px;
+}
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.footer__icons svg:hover path {
+  fill: #5373fd;
+}
+
+.spain-bg {
+  height: 684px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/spain-house.png);
+}
+
+.spain-bg2 {
+  height: 684px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/spain-rocks.png);
+}
+
+.tourist-bg {
+  height: 684px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/tourists-bg.png);
+}
+
+/*# sourceMappingURL=styles.css.map */

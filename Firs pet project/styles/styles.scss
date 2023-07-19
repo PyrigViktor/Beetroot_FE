@@ -1,0 +1,331 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+@font-face {
+    font-family: Aleo;
+    src: url(../assets/fonts/Aleo-Regular.ttf);
+}
+@font-face {
+    font-family: Josefin-light;
+    src: url(../assets/fonts/JosefinSans-Light.ttf);
+}
+
+@font-face {
+    font-family: JosefinSans;
+    src: url(../assets/fonts/JosefinSans-Regular.ttf);
+}
+
+.header {
+    &__bg {
+        @include mix.bg-settings(862px);
+        background-image: url(../assets/images/headerbackground.png);
+    }
+
+    &__content {
+        @include mix.flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        padding-top: 295px;
+        padding-bottom: 8px;
+        @include mix.main-title-text(48px, 52px);
+    }
+    &__sub-title {
+        padding-bottom: 48px;
+        @include mix.title-text(22px, 28px);
+        letter-spacing: 6.82px;
+    }
+    &__search {
+        position: relative;
+        padding-bottom: 210px;
+
+        &--input {
+            width: 647px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        &--button {
+            position: absolute;
+            transform: translate(-145px, 4px);
+            width: 139px;
+            height: 52px;
+            padding: 16px 24px;
+            border: 0;
+            background-color: var.$blue;
+            @include mix.text-button(14px);
+            letter-spacing: 1.4px;
+        }
+    }
+
+    &__navigation {
+        @include mix.flex;
+        flex-direction: row;
+        @include mix.section-padding;
+        justify-content: space-between;
+        height: 84px;
+        align-items: center;
+        background-color: var.$blue;
+
+        &--text {
+            @include mix.main-title-text(24px, 28px);
+            letter-spacing: 2.4px;
+        }
+        &--list {
+            @include mix.flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 40px;
+            @include mix.text-button(14px);
+            letter-spacing: 1.4px;
+        }
+    }
+}
+
+.choose-bg {
+    @include mix.bg-settings(704px);
+    background-image: url(../assets/images/why-choose-bg.png);
+}
+
+.blog {
+    @include mix.flex;
+    @include mix.section-padding;
+    flex-direction: row;
+
+    &__title {
+        @include mix.title-aleo(36px);
+        padding-bottom: 24px;
+    }
+
+    &__text {
+        @include mix.text-josefin(16px);
+        letter-spacing: 1.6px;
+        padding-bottom: 32px;
+    }
+
+    &__choose {
+        @include mix.flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 648px;
+        position: relative;
+
+        &--card1 {
+            position: absolute;
+            transform: translate(784px, 124px);
+        }
+        &--card2 {
+            position: absolute;
+            transform: translate(890px, 360px);
+        }
+    }
+
+    &__button {
+        @include mix.button-wh;
+        @include mix.text-button(16px);
+        letter-spacing: 1.12px;
+        border: 0;
+    }
+}
+
+.steps {
+    @include mix.section-padding;
+    background-color: var.$dark-gray;
+    height: 306px;
+
+    &__search {
+        @include mix.flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transform: translatex(22%);
+    }
+
+    &__icons {
+        width: 424px;
+        height: 139px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 107px;
+        gap: 20px;
+        position: relative;
+
+        &--border {
+            z-index: 1;
+            border: 50px solid var.$dark-gray;
+            border-radius: 50%;
+            height: 96px;
+            width: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--img {
+            display: flex;
+            position: absolute;
+        }
+    }
+
+    &__text {
+        @include mix.title-aleo(36px);
+    }
+}
+
+.spain {
+    @include mix.flex;
+    @include mix.section-padding;
+    padding-top: 220px;
+
+    &--reverse {
+        @include mix.flex;
+        justify-content: flex-end;
+    }
+
+    &__sub-title {
+        @include mix.text-josefin(20px);
+        letter-spacing: 2px;
+    }
+
+    &__title {
+        @include mix.title-text(20px, 28px);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    &__text {
+        @include mix.text-josefin(16px);
+        letter-spacing: 1.6px;
+        padding-bottom: 8px;
+        width: 584px;
+    }
+
+    &__container {
+        width: 648px;
+        height: 344px;
+        background: rgba(35, 35, 35, 0.9);
+        @include mix.flex;
+        flex-direction: column;
+        padding-top: 44px;
+        gap: 16px;
+        padding-left: 32px;
+    }
+    &__button {
+        @include mix.button-wh;
+        @include mix.text-button(16px);
+        letter-spacing: 1.12px;
+        border: 0;
+        position: relative;
+        text-align: center;
+
+        &--span {
+            z-index: 1;
+            position: relative;
+        }
+
+        &--svg {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.tourist {
+    @include mix.flex;
+    @include mix.section-padding;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+
+    &__title {
+        @include mix.title-aleo(36px);
+    }
+
+    &__container {
+        @include mix.flex;
+        flex-direction: row;
+        height: 280px;
+        background-color: var.$dark-gray;
+        margin-top: 60px;
+
+        &--about {
+            @include mix.flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            text-align: left;
+            padding-left: 60px;
+            padding-right: 65px;
+            gap: 16px;
+        }
+
+        &--title {
+            @include mix.title-text(20px, 28px);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        &--text {
+            @include mix.text-josefin(16px);
+            letter-spacing: 1.6px;
+            width: 760px;
+        }
+    }
+}
+
+.footer {
+    background-color: var.$black;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    @include mix.position-center;
+
+    &__title {
+        @include mix.main-title-text(24px, 28px);
+        letter-spacing: 2.4px;
+        padding-bottom: 8px;
+    }
+
+    &__text {
+        @include mix.title-text(14px, 20px);
+        letter-spacing: 2.8px;
+        padding-bottom: 20px;
+    }
+
+    &__icons {
+        @include mix.flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    &__icons svg:hover path {
+        fill: var.$blue;
+    }
+}
+
+.spain-bg {
+    @include mix.bg-settings(684px);
+    background-image: url(../assets/images/spain-house.png);
+}
+
+.spain-bg2 {
+    @include mix.bg-settings(684px);
+    background-image: url(../assets/images/spain-rocks.png);
+}
+
+.tourist-bg {
+    @include mix.bg-settings(684px);
+    background-image: url(../assets/images/tourists-bg.png);
+}

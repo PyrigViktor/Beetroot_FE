@@ -1,0 +1,75 @@
+@use "./variables" as var;
+
+@mixin section-padding {
+    padding-inline: 300px;
+}
+
+@mixin main-title-text($size, $color: var.$white) {
+    font-family: "JosefinSans";
+    font-size: $size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: $size;
+    text-transform: uppercase;
+    color: var.$white;
+}
+
+@mixin title-text($size, $color: var.$white) {
+    font-family: "JosefinSans";
+    font-size: $size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $size;
+    color: var.$white;
+}
+
+@mixin text-button($size) {
+    font-family: "Aleo";
+    font-size: $size;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+}
+
+@mixin title-aleo($size) {
+    font-family: "Aleo";
+    font-size: $size;
+    line-height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+}
+
+@mixin text-josefin($size, $color: var.$white) {
+    font-family: "Josefin-light";
+    font-size: $size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    color: var.$white;
+}
+
+@mixin bg-settings($size) {
+    height: $size;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin position-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-wh {
+    width: 213px;
+    height: 60px;
+    background-color: var.$blue;
+}
