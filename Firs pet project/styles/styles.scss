@@ -49,6 +49,19 @@
             width: 647px;
             height: 60px;
             flex-shrink: 0;
+            outline: none;
+            padding-left: 36px;
+        }
+
+        &--input::placeholder {
+            @include mix.title-text(14px, 20px);
+            color: #999999;
+            letter-spacing: 2.8px;
+        }
+
+        &--svg {
+            position: absolute;
+            transform: translateX(-25px);
         }
 
         &--button {
@@ -61,6 +74,13 @@
             background-color: var.$blue;
             @include mix.text-button(14px);
             letter-spacing: 1.4px;
+            transition: 0.5s;
+        }
+        &--button:hover {
+            background: rgb(0, 110, 255);
+        }
+        &--button:active {
+            background: white;
         }
     }
 
@@ -82,8 +102,16 @@
             flex-direction: row;
             list-style: none;
             gap: 40px;
+        }
+
+        &--li {
+            @include mix.flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 40px;
             @include mix.text-button(14px);
             letter-spacing: 1.4px;
+            text-decoration: none;
         }
     }
 }
@@ -132,6 +160,7 @@
         @include mix.text-button(16px);
         letter-spacing: 1.12px;
         border: 0;
+        cursor: pointer;
     }
 }
 
@@ -231,6 +260,7 @@
         border: 0;
         position: relative;
         text-align: center;
+        cursor: pointer;
 
         &--span {
             z-index: 1;

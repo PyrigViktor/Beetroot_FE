@@ -55,6 +55,22 @@
   width: 647px;
   height: 60px;
   flex-shrink: 0;
+  outline: none;
+  padding-left: 36px;
+}
+.header__search--input::placeholder {
+  font-family: "JosefinSans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: #ffffff;
+  color: #999999;
+  letter-spacing: 2.8px;
+}
+.header__search--svg {
+  position: absolute;
+  transform: translateX(-25px);
 }
 .header__search--button {
   position: absolute;
@@ -72,6 +88,13 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 1.4px;
+  transition: 0.5s;
+}
+.header__search--button:hover {
+  background: rgb(0, 110, 255);
+}
+.header__search--button:active {
+  background: white;
 }
 .header__navigation {
   display: flex;
@@ -97,6 +120,12 @@
   flex-direction: row;
   list-style: none;
   gap: 40px;
+}
+.header__navigation--li {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 40px;
   font-family: "Aleo";
   font-size: 14px;
   line-height: 20px;
@@ -105,6 +134,7 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 1.4px;
+  text-decoration: none;
 }
 
 .choose-bg {
@@ -169,6 +199,7 @@
   text-transform: uppercase;
   letter-spacing: 1.12px;
   border: 0;
+  cursor: pointer;
 }
 
 .steps {
@@ -287,6 +318,7 @@
   border: 0;
   position: relative;
   text-align: center;
+  cursor: pointer;
 }
 .spain__button--span {
   z-index: 1;
