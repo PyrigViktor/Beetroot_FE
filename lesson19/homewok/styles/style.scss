@@ -11,7 +11,7 @@
     justify-content: space-between;
     &__hamburger {
         display: none;
-        margin-left: 100px;
+        margin-left: 600px;
         @include mix.tablet-screen {
             display: block;
         }
