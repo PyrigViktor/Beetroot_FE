@@ -1,10 +1,10 @@
 @use "./variables" as var;
 @use "./mixins" as mix;
-
 @font-face {
     font-family: Aleo;
     src: url(../assets/fonts/Aleo-Regular.ttf);
 }
+
 @font-face {
     font-family: Josefin-light;
     src: url(../assets/fonts/JosefinSans-Light.ttf);
@@ -16,7 +16,9 @@
 }
 
 .wrapper {
-    width: 1920px;
+    // width: 1920px;
+    @include mix.tablet-screen;
+    @include mix.mobile-screen;
 }
 
 .header {
@@ -24,57 +26,89 @@
         @include mix.bg-settings(862px);
         background-image: url(../assets/images/headerbackground.png);
     }
-
     &__content {
         @include mix.flex;
         flex-direction: column;
         align-items: center;
     }
-
     &__title {
         padding-top: 295px;
         padding-bottom: 8px;
-        @include mix.main-title-text(48px, 52px);
+        @include mix.text-josefin-bold(48px, 52px, normal);
+        @include mix.mobile-screen {
+            @include mix.text-josefin-bold(30px, 52px, normal);
+        }
     }
     &__sub-title {
         padding-bottom: 48px;
-        @include mix.title-text(22px, 28px);
-        letter-spacing: 6.82px;
+        @include mix.text-josefin(22px, 28px, 6.82px);
+        @include mix.mobile-screen {
+            text-align: center;
+        }
+    }
+    &__text {
+        @include mix.text-josefin(14px, 20px, 2.8px);
+        padding-bottom: 5px;
     }
     &__search {
         position: relative;
         padding-bottom: 210px;
-
+        @include mix.mobile-screen {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
         &--input {
             width: 647px;
             height: 60px;
             flex-shrink: 0;
             outline: none;
             padding-left: 36px;
+            @include mix.mobile-screen {
+                width: 250px;
+                height: 40px;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
         }
-
         &--input::placeholder {
-            @include mix.title-text(14px, 20px);
-            color: #999999;
-            letter-spacing: 2.8px;
+            @include mix.text-josefin(14px, 20px, 2.8px, #999999);
+            @include mix.mobile-screen {
+                @include mix.text-josefin(8px, 20px, 2.8px, #999999);
+            }
         }
-
         &--svg {
             position: absolute;
             transform: translateX(-25px);
+            @include mix.mobile-screen {
+                transform: translateX(-35px);
+            }
         }
-
         &--button {
             position: absolute;
             transform: translate(-145px, 4px);
             width: 139px;
             height: 52px;
-            padding: 16px 24px;
+            padding: 16px 50px;
             border: 0;
             background-color: var.$blue;
-            @include mix.text-button(14px);
-            letter-spacing: 1.4px;
+            @include mix.text-aleo(14px, 20px, 1.4px);
             transition: 0.5s;
+            cursor: pointer;
+            @include mix.mobile-screen {
+                position: absolute;
+                transform: translate(0%, 70px);
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100px;
+                height: 40px;
+                @include mix.text-aleo(8px, 10px, 1.4px);
+            }
         }
         &--button:hover {
             background: rgb(0, 110, 255);
@@ -83,7 +117,6 @@
             background: white;
         }
     }
-
     &__navigation {
         @include mix.flex;
         flex-direction: row;
@@ -92,51 +125,51 @@
         height: 84px;
         align-items: center;
         background-color: var.$blue;
-
-        &--text {
-            @include mix.main-title-text(24px, 28px);
-            letter-spacing: 2.4px;
+        &--title {
+            @include mix.text-josefin-bold(24px, 28px, 2.4px);
         }
         &--list {
             @include mix.flex;
             flex-direction: row;
             list-style: none;
-            gap: 40px;
+            gap: 38px;
+            @include mix.tablet-screen {
+                gap: 20px;
+            }
         }
-
         &--li {
             @include mix.flex;
             flex-direction: row;
             list-style: none;
             gap: 40px;
-            @include mix.text-button(14px);
-            letter-spacing: 1.4px;
+            @include mix.text-aleo(14px, 20px, 1.4px);
             text-decoration: none;
         }
     }
-}
-
-.choose-bg {
-    @include mix.bg-settings(704px);
-    background-image: url(../assets/images/why-choose-bg.png);
 }
 
 .blog {
     @include mix.flex;
     @include mix.section-padding;
     flex-direction: row;
-
+    @include mix.tablet-screen {
+        flex-direction: column;
+    }
     &__title {
-        @include mix.title-aleo(36px);
+        @include mix.text-aleo(36px, 40px, normal);
         padding-bottom: 24px;
+        text-transform: none;
+        @include mix.mobile-screen {
+            @include mix.text-aleo(25px, 30px, normal);
+        }
     }
-
     &__text {
-        @include mix.text-josefin(16px);
-        letter-spacing: 1.6px;
+        @include mix.text-josefin-light(16px, 28px, 1.6px);
         padding-bottom: 32px;
+        @include mix.mobile-screen {
+            @include mix.text-josefin-light(12px, 14px, 1.6px);
+        }
     }
-
     &__choose {
         @include mix.flex;
         flex-direction: column;
@@ -144,21 +177,39 @@
         align-items: start;
         width: 648px;
         position: relative;
-
+        @include mix.tablet-screen {
+            margin: 0 auto;
+            position: static;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px;
+        }
+        @include mix.mobile-screen {
+            width: 300px;
+        }
         &--card1 {
+            @include mix.tablet-screen {
+                position: static;
+                transform: scale(80%);
+                // transform: translate(0px, 400px);
+            }
             position: absolute;
             transform: translate(784px, 124px);
         }
         &--card2 {
+            @include mix.tablet-screen {
+                position: static;
+                transform: scale(80%);
+                // transform: translate(0px, 400px);
+            }
             position: absolute;
-            transform: translate(890px, 360px);
+            transform: translate(860px, 360px);
         }
     }
-
     &__button {
         @include mix.button-wh;
-        @include mix.text-button(16px);
-        letter-spacing: 1.12px;
+        @include mix.text-aleo(16px, 20px, 1.12px);
         border: 0;
         cursor: pointer;
     }
@@ -166,23 +217,24 @@
 
 .steps {
     @include mix.section-padding;
+    @include mix.tablet-screen;
     background-color: var.$dark-gray;
     height: 306px;
-
     &__search {
         @include mix.flex;
         flex-direction: row;
         justify-content: space-between;
         position: relative;
     }
-
     &__svg {
         position: absolute;
         top: 60px;
         left: 0;
         transform: translatex(25%);
+        @include mix.tablet-screen {
+            display: none;
+        }
     }
-
     &__icons {
         width: 424px;
         height: 139px;
@@ -191,8 +243,14 @@
         align-items: center;
         justify-content: center;
         margin-top: 107px;
-        gap: 20px;
+        gap: 2px;
         position: relativ;
+        @include mix.tablet-screen {
+            position: static;
+            margin-top: 60px;
+            align-items: center;
+            justify-content: center;
+        }
         &--border {
             z-index: 1;
             border: 50px solid var.$dark-gray;
@@ -202,47 +260,64 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @include mix.mobile-screen {
+                border: none;
+            }
         }
-
         &--img {
             display: flex;
             position: absolute;
         }
     }
-
     &__text {
-        @include mix.title-aleo(36px);
+        @include mix.text-aleo(36px, 40px, normal);
+        text-transform: none;
+        @include mix.tablet-screen {
+            font-size: 20px;
+        }
+        @include mix.mobile-screen {
+            font-size: 14px;
+        }
     }
 }
 
 .spain {
     @include mix.flex;
     @include mix.section-padding;
+    @include mix.tablet-screen {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     padding-top: 220px;
-
     &--reverse {
         @include mix.flex;
         justify-content: flex-end;
+        @include mix.tablet-screen {
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
     }
-
     &__sub-title {
-        @include mix.text-josefin(20px);
-        letter-spacing: 2px;
+        @include mix.text-josefin-light(20px, 28px, 2px);
     }
-
     &__title {
-        @include mix.title-text(20px, 28px);
+        @include mix.text-josefin(20px, 28px, normal);
         text-transform: uppercase;
-        letter-spacing: 1.5px;
     }
-
     &__text {
-        @include mix.text-josefin(16px);
-        letter-spacing: 1.6px;
+        @include mix.text-josefin-light(16px, 28px, 1.6px);
         padding-bottom: 8px;
         width: 584px;
+        @include mix.mobile-screen {
+            max-width: 100%;
+            margin: 0 auto;
+            padding-left: 5px;
+            @include mix.text-josefin-light(10px, 14px, 1.6px);
+        }
     }
-
     &__container {
         width: 648px;
         height: 344px;
@@ -252,27 +327,39 @@
         padding-top: 44px;
         gap: 16px;
         padding-left: 32px;
+        @include mix.mobile-screen {
+            max-width: 300px;
+            max-height: 100%;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     &__button {
         @include mix.button-wh;
-        @include mix.text-button(16px);
-        letter-spacing: 1.12px;
+        @include mix.text-aleo(16px, 20px, 1.12px);
         border: 0;
         position: relative;
         text-align: center;
         cursor: pointer;
-
         &--span {
             z-index: 1;
             position: relative;
         }
-
         &--svg {
             position: absolute;
             top: 50%;
             left: 0;
             transform: translateY(-50%);
         }
+    }
+    &__button:hover {
+        background: rgb(0, 110, 255);
+    }
+    &__button:active {
+        background: white;
     }
 }
 
@@ -282,18 +369,43 @@
     flex-direction: column;
     text-align: center;
     padding-top: 120px;
-
-    &__title {
-        @include mix.title-aleo(36px);
+    @include mix.tablet-screen {
+        max-height: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30px;
     }
-
+    &__title {
+        @include mix.text-aleo(36px, 40px, normal);
+        text-transform: none;
+        @include mix.mobile-screen {
+            margin: 0 auto;
+            @include mix.text-aleo(25px, 30px, normal);
+        }
+    }
     &__container {
         @include mix.flex;
         flex-direction: row;
         height: 280px;
         background-color: var.$dark-gray;
         margin-top: 60px;
-
+        @include mix.tablet-screen {
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            background: none;
+        }
+        &--img {
+            @include mix.tablet-screen {
+                max-height: 100%;
+                margin-top: 400px;
+            }
+            @include mix.mobile-screen {
+                max-width: 300px;
+                margin-top: 200px;
+            }
+        }
         &--about {
             @include mix.flex;
             flex-direction: column;
@@ -303,18 +415,33 @@
             padding-left: 60px;
             padding-right: 65px;
             gap: 16px;
+            @include mix.tablet-screen {
+                margin: 0 auto;
+                padding: 0;
+                text-align: center;
+            }
         }
-
         &--title {
-            @include mix.title-text(20px, 28px);
+            @include mix.text-josefin(20px, 28px, normal);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            @include mix.tablet-screen {
+                margin: 0 auto;
+                width: auto;
+                text-align: center;
+                padding-top: 50px;
+            }
         }
-
         &--text {
-            @include mix.text-josefin(16px);
-            letter-spacing: 1.6px;
+            @include mix.text-josefin-light(16px, 28px, 1.6px);
             width: 760px;
+            @include mix.tablet-screen {
+                width: auto;
+                padding-inline: 100px;
+            }
+            @include mix.mobile-screen {
+                @include mix.text-josefin-light(10px, 14px, 1.6px);
+                padding-inline: 20px;
+            }
         }
     }
 }
@@ -325,19 +452,16 @@
     display: flex;
     flex-direction: column;
     @include mix.position-center;
-
-    &__title {
-        @include mix.main-title-text(24px, 28px);
-        letter-spacing: 2.4px;
-        padding-bottom: 8px;
+    @include mix.tablet-screen {
     }
-
+    &__title {
+        @include mix.text-josefin-bold(24px, 28px, 2.4px);
+        padding-bottom: 10px;
+    }
     &__text {
-        @include mix.title-text(14px, 20px);
-        letter-spacing: 2.8px;
+        @include mix.text-josefin(14px, 20px, 2.8px);
         padding-bottom: 20px;
     }
-
     &__icons {
         @include mix.flex;
         flex-direction: row;
@@ -361,4 +485,9 @@
 .tourist-bg {
     @include mix.bg-settings(684px);
     background-image: url(../assets/images/tourists-bg.png);
+}
+
+.blog-bg {
+    @include mix.bg-settings(704px);
+    background-image: url(../assets/images/why-choose-bg.png);
 }

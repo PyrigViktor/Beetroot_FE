@@ -1,59 +1,82 @@
 @use "./variables" as var;
+// @mixin section-padding {
+//     padding-inline: 300px;
+// }
+@mixin mobile-screen {
+    @media screen and (max-width: var.$tablet-screen) {
+        @content;
+    }
+}
+
+@mixin tablet-screen {
+    @media screen and (max-width: var.$desktop-screen) {
+        @content;
+    }
+}
 
 @mixin section-padding {
-    padding-inline: 300px;
+    padding-inline: var.$desktop-inline-padding;
+    @include tablet-screen {
+        padding-inline: var.$tablet-inline-padding;
+    }
+    @include mobile-screen {
+        padding-inline: var.$mobile-inline-padding;
+    }
 }
 
-@mixin main-title-text($size, $color: var.$white) {
+@mixin text-josefin-bold($font-size, $line-h, $letter-spacing, $color: var.$white) {
     font-family: "JosefinSans";
-    font-size: $size;
+    font-size: $font-size;
     font-style: normal;
     font-weight: 700;
-    line-height: $size;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
     text-transform: uppercase;
-    color: var.$white;
+    color: $color;
 }
 
-@mixin title-text($size, $color: var.$white) {
+@mixin text-josefin($font-size, $line-h, $letter-spacing, $color: var.$white) {
     font-family: "JosefinSans";
-    font-size: $size;
+    font-size: $font-size;
     font-style: normal;
     font-weight: 400;
-    line-height: $size;
-    color: var.$white;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
 }
 
-@mixin text-button($size) {
-    font-family: "Aleo";
-    font-size: $size;
-    line-height: 20px;
-    font-style: normal;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-}
-
-@mixin title-aleo($size) {
-    font-family: "Aleo";
-    font-size: $size;
-    line-height: 40px;
-    font-style: normal;
-    font-weight: 400;
-    color: white;
-    text-transform: capitalize;
-}
-
-@mixin text-josefin($size, $color: var.$white) {
+@mixin text-josefin-light($font-size, $line-h, $letter-spacing, $color: var.$white) {
     font-family: "Josefin-light";
-    font-size: $size;
+    font-size: $font-size;
     font-style: normal;
     font-weight: 300;
-    line-height: 28px;
-    color: var.$white;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
 }
 
+@mixin text-aleo($font-size, $line-h, $letter-spacing, $color: var.$white) {
+    font-family: "Aleo";
+    font-size: $font-size;
+    line-height: $line-h;
+    font-style: normal;
+    font-weight: 400;
+    color: $color;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+}
+
+// @mixin title-aleo($size) {
+//     font-family: "Aleo";
+//     font-size: $size;
+//     line-height: 40px;
+//     font-style: normal;
+//     font-weight: 400;
+//     color: white;
+//     text-transform: capitalize;
+// }
 @mixin bg-settings($size) {
-    height: $size;
+    min-height: $size;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,5 +94,11 @@
 @mixin button-wh {
     width: 213px;
     height: 60px;
+    background-color: var.$blue;
+}
+
+@mixin button-wh-mobile {
+    max-width: 100px;
+    max-height: 40px;
     background-color: var.$blue;
 }

@@ -1,6 +1,5 @@
 @use "./variables" as var;
 @use "./mixins" as mix;
-
 @font-face {
   font-family: Lato;
   src: url(/assets/fonts/lato/Lato-Regular.ttf);
@@ -24,15 +23,12 @@
 .blog {
   @include mix.section-padding;
   padding-block: 70px;
-
   @include mix.tablet-screen {
     padding-block: 50px;
   }
-
   @include mix.mobile-screen {
     padding-block: 40px;
   }
-
   &__title--main {
     @include mix.title-main;
     padding-bottom: 70px;
@@ -49,7 +45,6 @@
       letter-spacing: 1.65px;
     }
   }
-
   &__title,
   &__description--title {
     padding-bottom: 50px;
@@ -66,12 +61,10 @@
       padding-top: 70px;
     }
   }
-
   &__text,
   &__description--text {
     max-width: 1170px;
     @include mix.text;
-
     padding-bottom: 90px;
     @include mix.mobile-screen {
       padding-bottom: 70px;
@@ -85,7 +78,6 @@
     }
     padding-top: 20px;
   }
-
   &__description--text {
     max-width: 570px;
     @include mix.mobile-screen {
@@ -105,28 +97,24 @@ footer {
   display: flex;
   justify-content: space-between;
   @include mix.section-padding;
-
   @include mix.tablet-screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   &__contacts {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     height: 300px;
-
     @include mix.tablet-screen {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-
     @include mix.mobile-screen {
       display: flex;
       flex-direction: column;
@@ -144,7 +132,6 @@ footer {
       }
     }
   }
-
   &__contacts > a {
     @include mix.text;
     font-size: 16px;
@@ -152,11 +139,9 @@ footer {
     letter-spacing: 1.6px;
     color: black;
   }
-
   &__contacts > a:nth-child(2) {
     padding-bottom: 14px;
   }
-
   &__icons {
     display: flex;
     flex-direction: row;
@@ -164,7 +149,6 @@ footer {
     align-items: center;
     gap: 10px;
   }
-
   &__icons--border {
     display: flex;
     justify-content: center;
@@ -173,15 +157,12 @@ footer {
     height: 50px;
     border: 1px solid #565656;
   }
-
   &__icons--border:hover {
     background: #565656;
   }
-
   svg:hover path {
     fill: white;
   }
-
   &__text {
     display: flex;
     align-items: end;
