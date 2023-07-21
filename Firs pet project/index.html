@@ -43,21 +43,15 @@
     <section class="header__navigation">
         <h2 class="header__navigation--title">Bhromaon</h2>
         <nav>
-            <ul class="header__navigation--list">
-                <a class="header__navigation--li" href="#whoweare">
-                    <li>who we are</li>
-                </a>
-                <a class="header__navigation--li" href="#whatwedo">
-                    <li>what we do</li>
-                </a>
-                <a class="header__navigation--li" href="#travelwithus">
-                    <li>travel with us</li>
-                </a>
-                <a class="header__navigation--li" href="#contact">
-                    <li>contact us</li>
-                </a>
+            <ul id="navigation" class="header__navigation--list  navigation">
+                <li> <a class="header__navigation--li" href="#whoweare">who we are</a></li>
+                <li> <a class="header__navigation--li" href="#whatwedo">what we do</a></li>
+                <li> <a class="header__navigation--li" href="#travelwithus">travel with us</a></li>
+                <li><a class="header__navigation--li" href="#contact">contact us</a></li>
+                <button id="close-navigation" class="navigation__close-btn">Close</button>
             </ul>
         </nav>
+        <img id="open-navigation" class="header__hamburger" src="./assets/images/hamburger.svg" alt="">
     </section>
 </header>
 
@@ -66,22 +60,17 @@
         <div class="blog__choose">
             <h3 class="blog__title">Why Choose Us</h3>
             <p class="blog__text">Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee <br><br> Ddislike men who are so beguiled and demoralized by the charms of pleasure
-                of the moment, so blinded by desire, that.
-            </p>
+                of the moment, so blinded by desire, that.</p>
             <button class="spain__button"><span class="spain__button--span">explore places</span><svg
                     class="spain__button--svg" xmlns="http://www.w3.org/2000/svg" width="109" height="60"
                     viewBox="0 0 109 60" fill="none">
-                    <path d="M0 0H52L109 60H0V0Z" fill="#486BFE" />
-                </svg> </button>
-
+                    <path d="M0 0H52L109 60H0V0Z" fill="#486BFE" /></svg> </button>
         </div>
         <img class="blog__choose--card1" src="./assets/images/lake.png">
         <img class="blog__choose--card2" src="./assets/images/mountains.png">
     </section>
-
     <section id="whatwedo" class="steps">
         <div class="steps__search">
-
             <svg class="steps__svg" xmlns="http://www.w3.org/2000/svg" width="874" height="92" viewBox="0 0 874 92" fill="none">
                 <path opacity="0.502" d="M1 91C1 91 217.014 -110.278 442.118 91C442.118 91 639.939 -111.5 873 91"
                     stroke="white" stroke-linecap="round" stroke-dasharray="2 5" />
@@ -90,28 +79,22 @@
                 <div class="steps__icons--border">
                     <img class="steps__icons--img" src="./assets/images/search.svg" alt="">
                 </div>
-
                 <p class="steps__text">Search Places</p>
             </div>
-
             <div class="steps__icons">
                 <div class="steps__icons--border">
                     <img class="steps__icons--img" src="./assets/images/check-circle.svg" alt="">
                 </div>
-
                 <p class="steps__text">Select Places</p>
             </div>
-
             <div class="steps__icons">
                 <div class="steps__icons--border">
                     <img class="steps__icons--img" src="./assets/images/thumbs-up.svg" alt="">
                 </div>
-
                 <p class="steps__text">Book & Enjoy</p>
             </div>
         </div>
     </section>
-
     <section class="spain spain-bg">
         <div class="spain__container">
             <h6 class="spain__sub-title">Spain</h6>
@@ -124,7 +107,6 @@
                 </svg> </button>
         </div>
     </section>
-
     <section class="spain spain--reverse spain-bg2">
         <div class="spain__container">
             <h6 class="spain__sub-title">Spain</h6>
@@ -137,9 +119,7 @@
                 </svg> </button>
         </div>
     </section>
-
     <section id="travelwithus" class="tourist tourist-bg">
-
         <h3 class="tourist__title">What Our Tourists Say</h3>
         <div class="tourist__container">
             <img class="tourist__container--img" src="./assets/images/sam-sumon-ph.png" alt="">
@@ -156,7 +136,6 @@
             </div>
         </div>
     </section>
-
     <footer id="contact" class="footer wrapper">
         <h2 class="footer__title">Bhromaon</h2>
         <p class="footer__text">Safe Travel Anywhere</p>
@@ -200,7 +179,7 @@
                 </svg></a>
         </div>
     </footer>
-
+    <script src="./scripts/navigation.js" defer></script>
 </body>
 
 </html>

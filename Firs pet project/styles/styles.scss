@@ -39,6 +39,12 @@
             @include mix.text-josefin-bold(30px, 52px, normal);
         }
     }
+    &__hamburger {
+        display: none;
+        @include mix.tablet-screen {
+            display: block;
+        }
+    }
     &__sub-title {
         padding-bottom: 48px;
         @include mix.text-josefin(22px, 28px, 6.82px);
@@ -355,12 +361,6 @@
             transform: translateY(-50%);
         }
     }
-    &__button:hover {
-        background: rgb(0, 110, 255);
-    }
-    &__button:active {
-        background: white;
-    }
 }
 
 .tourist {
@@ -490,4 +490,34 @@
 .blog-bg {
     @include mix.bg-settings(704px);
     background-image: url(../assets/images/why-choose-bg.png);
+}
+
+.navigation {
+    @include mix.tablet-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        contain: paint;
+        transform: translateX(-100%);
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        &--open {
+            transform: translateX(0);
+        }
+    }
+    &__close-btn {
+        display: none;
+        @include mix.tablet-screen {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: block;
+        }
+    }
 }
