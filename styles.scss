@@ -148,12 +148,6 @@
             gap: 40px;
             @include mix.text-aleo(14px, 20px, 1.4px);
             text-decoration: none;
-            @include mix.tablet-screen {
-                color: black;
-            }
-            @include mix.mobile-screen {
-                color: black;
-            }
         }
     }
 }
