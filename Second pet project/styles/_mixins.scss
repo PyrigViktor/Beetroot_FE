@@ -1,0 +1,58 @@
+@use "./veriables" as var;
+
+@mixin bg-settings($size) {
+    min-height: $size;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin text-OpenSansReg($font-size, $line-h, $letter-spacing, $color: var.$white) {
+    font-family: "OpenSansReg";
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
+
+@mixin text-OpenSansBold($font-size, $line-h, $letter-spacing, $color: var.$white) {
+    font-family: "OpenSansBold";
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
+
+@mixin text-OpenSansIt($font-size, $line-h, $letter-spacing, $color: var.$white) {
+    font-family: "OpenSansIt";
+    font-size: $font-size;
+    font-style: italic;
+    font-weight: 400;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
+
+@mixin text-MontserratReg($font-size, $line-h, $letter-spacing, $color: var.$white) {
+    font-family: "MontserratReg";
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
+
+@mixin text-MontserratBold($font-size, $line-h, $letter-spacing, $color: var.$white) {
+    font-family: "MontserratBold";
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: $line-h;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
