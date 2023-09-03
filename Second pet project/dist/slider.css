@@ -1,29 +1,12 @@
 @charset "UTF-8";
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
 }
 
-/* Лента слайдов */
 .slick-track {
   display: flex;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
-/* Активная точка */
-/* Элемент точки */
 .slider .slick-track {
   display: block;
 }
@@ -72,12 +55,10 @@
   list-style: none;
 }
 
-/* Активная точка */
 .slider .slick-dots li.slick-active button {
   background-color: white;
 }
 
-/* Элемент точки */
 .slider .slick-dots li button {
   font-size: 0;
   width: 10px;

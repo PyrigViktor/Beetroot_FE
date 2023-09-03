@@ -10,16 +10,16 @@
     <title>Monticello</title>
 </head>
 
-<body>
+<body class="wrapper">
     <header class="header">
         <section class="navigation">
             <img class="navigation__logo" src="./assets/images/comp-logo.svg" alt="company logo">
             <nav>
                 <ul class="navigation__ul">
-                    <li><a class="navigation__li" href="">about us</a></li>
-                    <li><a class="navigation__li" href="">projects</a></li>
-                    <li><a class="navigation__li" href="">news</a></li>
-                    <li><a class="navigation__li" href="">contact</a></li>
+                    <li><a class="navigation__li" href="#about-us">about us</a></li>
+                    <li><a class="navigation__li" href="#projects">projects</a></li>
+                    <li><a class="navigation__li" href="#news">news</a></li>
+                    <li><a class="navigation__li" href="#contacts">contact</a></li>
                 </ul>
             </nav>
 
@@ -54,7 +54,7 @@
         </div>
     </header>
 
-    <section class="projects">
+    <section id="projects" class="projects">
         <h2 class="projects__title">what we do</h2>
         <div class="projects__trade-center">
             <div class="projects__architecture-card">
@@ -97,10 +97,10 @@
         </div>
     </section>
 
-    <section class="news">
+    <section id="news" class="news">
         <h3 class="news__title">latest news</h3>
         <!-- ТУТ СЛАЙДЕР -->
-        <div class="news-slider">
+        <div class="news-slider news-slider-table">
             <div class="news-slider__container">
                 <img src="./assets/images/news-card-1.svg" alt="">
                 <div class="news-slider__main-text">
@@ -193,7 +193,7 @@
         </button>
     </section>
 
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div id="map">
         </div>
 

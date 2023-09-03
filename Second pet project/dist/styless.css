@@ -27,6 +27,16 @@
   flex-direction: column;
   padding-inline: 215px;
 }
+@media screen and (max-width: 1440px) {
+  .header {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding-inline: 10px;
+  }
+}
 .header__arrow {
   margin: 0 auto;
   display: flex;
@@ -75,6 +85,17 @@
   color: #ffffff;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 1440px) {
+  .slider__title {
+    font-family: "MontserratBold";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
+    color: #ffffff;
+  }
+}
 .slider__subtitle {
   font-family: "MontserratReg";
   font-size: 18px;
@@ -84,10 +105,31 @@
   letter-spacing: 5.4px;
   color: #ffffff;
 }
+@media screen and (max-width: 1440px) {
+  .slider__subtitle {
+    font-family: "MontserratReg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.5px;
+    color: #ffffff;
+  }
+}
 
 .projects {
   padding-top: 130px;
   padding-inline: 215px;
+}
+@media screen and (max-width: 1440px) {
+  .projects {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    padding-inline: 10px;
+  }
 }
 .projects__architecture-card {
   position: relative;
@@ -101,6 +143,11 @@
   transform: translate(-50%, -50%);
   z-index: -1;
   object-fit: cover;
+}
+@media screen and (max-width: 1440px) {
+  .projects__architecture-card--bg {
+    display: none;
+  }
 }
 .projects__title {
   text-align: center;
@@ -128,10 +175,29 @@
   display: flex;
   gap: 70px;
 }
+@media screen and (max-width: 1440px) {
+  .projects__trade-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .projects__commerce {
   padding-top: 200px;
   display: flex;
   flex-direction: row-reverse;
+}
+@media screen and (max-width: 1440px) {
+  .projects__commerce {
+    gap: 70px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 130px;
+  }
 }
 .projects__commerce-card {
   position: relative;
@@ -146,6 +212,11 @@
   z-index: -1;
   object-fit: cover;
 }
+@media screen and (max-width: 1440px) {
+  .projects__commerce-card--bg {
+    display: none;
+  }
+}
 
 .about-center,
 .about-commerce {
@@ -154,6 +225,24 @@
   align-items: start;
   justify-content: center;
   max-width: 490px;
+}
+@media screen and (max-width: 1440px) {
+  .about-center,
+  .about-commerce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .about-center .about-commerce,
+  .about-commerce .about-commerce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .about-center__subtitle,
 .about-commerce__subtitle {
@@ -165,6 +254,12 @@
   letter-spacing: normal;
   color: #2c4058;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1440px) {
+  .about-center__subtitle,
+  .about-commerce__subtitle {
+    padding-bottom: 20px;
+  }
 }
 .about-center__title,
 .about-commerce__title {
@@ -188,6 +283,12 @@
   line-height: 30px;
   letter-spacing: normal;
   color: #2c4058;
+}
+@media screen and (max-width: 1440px) {
+  .about-center__text,
+  .about-commerce__text {
+    text-align: center;
+  }
 }
 .about-center__small > a,
 .about-commerce__small > a {
@@ -219,14 +320,24 @@
 }
 
 .news {
+  padding-inline: 215px;
   margin: 0 auto;
-  padding-inline: 115px;
   padding-top: 150px;
   background: url(../assets/images/news-bg.svg);
   min-height: 978px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width: 1440px) {
+  .news {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .news {
+    padding-inline: 10px;
+  }
 }
 .news__title {
   text-align: center;
@@ -261,14 +372,36 @@
   color: #2c4058;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1440px) {
+  .news-slider__title {
+    font-family: "MontserratBold";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c4058;
+  }
+}
 .news-slider__subtitle {
   font-family: "OpenSansReg";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 20px;
   letter-spacing: normal;
   color: #2c4058;
+}
+@media screen and (max-width: 1440px) {
+  .news-slider__subtitle {
+    font-family: "OpenSansReg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: normal;
+    color: #2c4058;
+  }
 }
 .news-slider__name {
   font-family: "MontserratReg";
@@ -376,6 +509,17 @@
 
 .footer {
   position: relative;
+  padding-inline: 215px;
+}
+@media screen and (max-width: 1440px) {
+  .footer {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-inline: 10px;
+  }
 }
 .footer__bg {
   min-height: 549px;
@@ -383,6 +527,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background: url(../assets/images/footer-bg.svg) 0 0/100% no-repeat;
+  padding-inline: 215px;
+}
+@media screen and (max-width: 1440px) {
+  .footer__bg {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__bg {
+    padding-inline: 10px;
+  }
 }
 .footer__content {
   padding-top: 200px;
@@ -390,6 +545,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-inline: 215px;
+}
+@media screen and (max-width: 1440px) {
+  .footer__content {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__content {
+    padding-inline: 10px;
+  }
 }
 .footer__logo {
   display: flex;
@@ -438,6 +604,17 @@
   display: flex;
   justify-content: space-between;
   padding-inline: 60px;
+  padding-inline: 215px;
+}
+@media screen and (max-width: 1440px) {
+  .footer__container {
+    padding-inline: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
+    padding-inline: 10px;
+  }
 }
 .footer__contacts {
   display: flex;
