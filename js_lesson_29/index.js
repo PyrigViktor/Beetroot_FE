@@ -19,8 +19,6 @@ let userCar = {
     fuelTank: 50,
     averageFuelConsumption: 8.2,
     driver: ["John" , "Alex", "Denis"],
-
-
     allInfo: function () {
         console.log("Manufacturer -", this.make);
         console.log("Model -", this.model);
@@ -30,15 +28,12 @@ let userCar = {
         console.log("Average fuel consumption -", this.averageFuelConsumption);
         console.log("Drivers -", this.driver.join(", "));
     },
-
     addDriver: function (driverName) {
         this.driver.push(driverName);
     },
-
     hasDriver: function(driverName) {
         return this.driver.includes(driverName);
     },
-
 };
 
 function travelInfo (distance) {
@@ -74,3 +69,4 @@ userCar.addDriver(["James"]);
 userCar.allInfo();
 
 console.log("Is John can drive this car?", userCar.hasDriver("John"));
+
