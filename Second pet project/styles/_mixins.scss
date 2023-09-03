@@ -1,4 +1,26 @@
-@use "./veriables" as var;
+@use "./variables" as var;
+
+@mixin mobile-screen {
+    @media screen and (max-width: var.$tablet-screen) {
+        @content;
+    }
+}
+
+@mixin tablet-screen {
+    @media screen and (max-width: var.$desktop-screen) {
+        @content;
+    }
+}
+
+@mixin section-padding {
+    padding-inline: var.$desktop-inline-padding;
+    @include tablet-screen {
+        padding-inline: var.$tablet-inline-padding;
+    }
+    @include mobile-screen {
+        padding-inline: var.$mobile-inline-padding;
+    }
+}
 
 @mixin bg-settings($size) {
     min-height: $size;

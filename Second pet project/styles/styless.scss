@@ -1,4 +1,4 @@
-@use "./veriables" as var;
+@use "./variables" as var;
 @use "./mixins" as mix;
 
 @font-face {
@@ -28,9 +28,8 @@
 .header {
     @include mix.bg-settings(800px);
     background-image: url(../assets/images/header-bgv2.svg);
-
     flex-direction: column;
-    padding-inline: 215px;
+    @include mix.section-padding;
 
     &__arrow {
         margin: 0 auto;
@@ -46,6 +45,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     &__ul {
         display: flex;
         flex-direction: row;
@@ -68,15 +68,21 @@
     &__title {
         @include mix.text-MontserratBold(80px, normal, 8px);
         padding-bottom: 20px;
+        @include mix.tablet-screen {
+            @include mix.text-MontserratBold(50px, normal, 6px);
+        }
     }
     &__subtitle {
         @include mix.text-MontserratReg(18px, normal, 5.4px);
+        @include mix.tablet-screen {
+            @include mix.text-MontserratReg(14px, normal, 3.5px);
+        }
     }
 }
 
 .projects {
     padding-top: 130px;
-    padding-inline: 215px;
+    @include mix.section-padding;
 
     &__architecture-card {
         position: relative;
@@ -90,6 +96,9 @@
             transform: translate(-50%, -50%);
             z-index: -1;
             object-fit: cover;
+            @include mix.tablet-screen {
+                display: none;
+            }
         }
     }
 
@@ -114,12 +123,27 @@
     &__trade-center {
         display: flex;
         gap: 70px;
+        @include mix.tablet-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__commerce {
         padding-top: 200px;
         display: flex;
         flex-direction: row-reverse;
+        @include mix.tablet-screen {
+            gap: 70px;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 130px;
+        }
     }
 
     &__commerce-card {
@@ -134,6 +158,9 @@
             transform: translate(50%, 50%);
             z-index: -1;
             object-fit: cover;
+            @include mix.tablet-screen {
+                display: none;
+            }
         }
     }
 }
@@ -145,10 +172,28 @@
     align-items: start;
     justify-content: center;
     max-width: 490px;
+    @include mix.tablet-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-commerce {
+        @include mix.tablet-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 
     &__subtitle {
         @include mix.text-MontserratReg(22px, normal, normal, var.$black);
         text-transform: uppercase;
+        @include mix.tablet-screen {
+            padding-bottom: 20px;
+        }
     }
 
     &__title {
@@ -160,6 +205,9 @@
     &__text {
         padding-bottom: 40px;
         @include mix.text-OpenSansReg(18px, 30px, normal, var.$black);
+        @include mix.tablet-screen {
+            text-align: center;
+        }
     }
 
     &__small > a {
@@ -180,8 +228,8 @@
 }
 
 .news {
+    @include mix.section-padding;
     margin: 0 auto;
-    padding-inline: 115px;
     padding-top: 150px;
     background: url(../assets/images/news-bg.svg);
     @include mix.bg-settings(978px);
@@ -209,9 +257,15 @@
     &__title {
         @include mix.text-MontserratBold(22px, normal, normal, var.$black);
         text-transform: uppercase;
+        @include mix.tablet-screen {
+            @include mix.text-MontserratBold(16px, normal, normal, var.$black);
+        }
     }
     &__subtitle {
-        @include mix.text-OpenSansReg(18px, 30px, normal, var.$black);
+        @include mix.text-OpenSansReg(18px, 20px, normal, var.$black);
+        @include mix.tablet-screen {
+            @include mix.text-OpenSansReg(14px, 15px, normal, var.$black);
+        }
     }
 
     &__name {
@@ -305,10 +359,12 @@
 
 .footer {
     position: relative;
+    @include mix.section-padding;
 
     &__bg {
         @include mix.bg-settings(549px);
         background: url(../assets/images/footer-bg.svg) 0 0/100% no-repeat;
+        @include mix.section-padding;
     }
 
     &__content {
@@ -317,6 +373,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include mix.section-padding;
     }
 
     &__logo {
@@ -363,6 +420,7 @@
         display: flex;
         justify-content: space-between;
         padding-inline: 60px;
+        @include mix.section-padding;
     }
 
     &__contacts {
