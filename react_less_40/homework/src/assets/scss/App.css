@@ -1,0 +1,101 @@
+.Main {
+  height: 100%;
+  width: 100%;
+  border: 25px solid #2B81AC;
+  background: #39C;
+  flex-direction: row;
+  padding-inline: 140px;
+}
+.Main__title {
+  display: flex;
+  padding-top: 60px;
+  gap: 10px;
+}
+.Main__h5 {
+  color: #FFF;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-inline: 140px;
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-inline: 140px;
+  color: #FFF;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #FFF;
+  height: 150px;
+}
+
+.wide {
+  grid-column: span 2;
+  border: 2px solid #FFF;
+}
+
+.fullwide {
+  grid-column: span 4;
+  border: 2px solid #FFF;
+}
+
+.lisbon {
+  background-color: cornflowerblue;
+}
+
+.paris {
+  background-color: #33CCCC;
+}
+
+.belgrade {
+  background-color: #996699;
+}
+
+.venice {
+  background-color: #C24747;
+}
+
+.tel-avive {
+  background-color: #E2674A;
+}
+
+.cair {
+  background-color: #FFCC66;
+}
+
+.new-york {
+  background-color: #99CC99;
+}
+
+.new-delhi {
+  background-color: #669999;
+}
+
+.san-francisco {
+  background-color: #CC6699;
+}
+
+.tokyo {
+  background-color: #339966;
+}
+
+.sydney {
+  background-color: #666699;
+}
+
+/*# sourceMappingURL=App.css.map */
