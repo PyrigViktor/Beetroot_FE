@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+.header__information {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  height: 50px;
+  width: 50px;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.header__li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=Header-style.css.map */
